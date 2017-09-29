@@ -23,6 +23,7 @@ int main(){
   for (int i = 0; i < 80; i++){
     check = in[i];
     if (isalpha(check)){
+      check = tolower(check);
       newstr[count] = check;
       count++;
     }
@@ -31,6 +32,7 @@ int main(){
   newstr[count] = '\0';
   out[count] = '\0';
   count--;
+  cout << newstr << endl;
   //check if its a palindrome
   for (int i = 0; i < 80; i++){
     if (count >= 0){
@@ -38,6 +40,7 @@ int main(){
       count--;
     }
   }
+  cout << out << endl;
   //return answer
   if(strcmp(newstr,out) == 0){
     cout << "Palindrome" << endl;
